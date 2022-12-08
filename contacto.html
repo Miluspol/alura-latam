@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reset/reset.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Contacto</title>
+</head>
+<body>
+    <header>
+        <div class="caja">
+            <h1><img src="imagenes/imgproyecto/logo.png" alt="logo de la barberia alura"></h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="productos.html"> Productos</a></li>
+                    <li><a href="contactos.html"> Contactos</a></li>
+                </ul>
+            </nav>    
+        </div> 
+    </header>
+    <main>
+        <form action="">
+            <label for="nombreapellido">Nombre y Apellido</label>
+            <input type="text" id="nombreapellido" class="input-padron" required>
+
+            <label for="correoelectronicos">E-mail</label>
+            <input type="email" id="correoelectronico" class="input-padron" required placeholder="email@dominio.com">
+            <!--placeholder es para ayudar al usuario con lo que tiene que poner en el campo a completar-->
+            <label for="telefono">Teléfono</label>
+            <input type="tel" id="telefono" class="input-padron" required placeholder="(xx) xxxx xxxx">
+            <!--requiered propiedad para que se llene un campo requerido-->
+            <label for="msj">Mensaje</label>
+            <textarea id="msj" cols="70" rows="10" class="input-padron" required></textarea>
+
+            <fieldset><!--hace referencia a las mismas cosas
+                        legend es una etiqueta (es para definir un titulo en nuestro campo de formulario)  de fieldset-->
+                       
+
+                <legend class="test" id="test">¿Cómo le gustaria que lo contactemos?</legend>>
+                 <!--radio es para poner circulitos de selección-->
+                <label for="radio-email"><input type="radio" name="contacto" value="email" id="radio-email" >E-mail</label>
+                
+                <label for="radio-telefono"> <input type="radio" name="contacto"  value="telefono" id="radio-telefono" >Teléfono</label>
+               
+                <label for="radio-whatsapp"><input type="radio" name="contacto"  value="whatsapp" id="radio-whatsapp" checked>WhatsApp</label>
+                
+            </fieldset>
+
+            <fieldset>
+                <legend>¿En cuál horario prefieres ser atendido?</legend>
+                <select name="" id="">
+                    <option value="">Mañana</option>
+                    <option value="">Tarde</option>
+                    <option value="">Noche</option>
+                </select>
+            </fieldset>
+            
+            <!--leabel se usa para referirce a los input
+            checkbox son las cajitas de checkear
+            checked es la propiedad que usa para que este marcado-->
+            <label class="checkbox"><input type="checkbox" checked> ¿Le gustaría recibir novedades de la Barberia Alura?</label>
+
+            <input type="submit" value="enviar formulario" class="enviar">
+        </form>
+        <!--uso correcto de la semantica de una tabla-->
+        <table><!--etiqueta para tablas-->
+            <thead><!--encabezado de tabla-->
+                <tr><!--define las lineas o filas de las tablas-->
+                    <td>Día</td><!--define las columnas de la tabla-->
+                    <td>Horario</td>
+                </tr>
+            </thead>
+            <tbody><!--cuerpo de la tabla-->
+                <tr>
+                    <td>Lunes</td>
+                    <td>08h - 20h</td>
+                </tr>
+                <tr>
+                    <td>Miércoles</td>
+                    <td>08h - 20h</td>
+                </tr>
+                <tr>
+                    <td>Viernes</td>
+                    <td>08h - 20h</td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
+    <footer>
+        <img src="imagenes/imgproyecto/logo-blanco.png" alt="logo de la barberia alura">
+        <p class="copyright">&copy copyright Barbería Alura - 2020 </p>
+    </footer>
+    
+</body>
+</html>
+
+<!--existen distintas propiedades para el input: pueden ser e-mail, tel, numbre, password, date, datetime, month, search y se invocan en el type-->
