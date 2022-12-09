@@ -12,8 +12,8 @@ header{
 }
 
 .caja{
-    position: relative;
     width: 940px;
+    position: relative;
     margin: 0 auto;
 }
 
@@ -105,7 +105,7 @@ footer{
 
 
 form{
-    margin: 40px 30px;
+    margin: 40px 0;
     padding: 0 0 0 10px;
 }
 
@@ -119,6 +119,7 @@ form label, legend{
     margin: 0 0 20px;
     padding: 10px 25px;
     width: 50%;
+    border-style: solid;
 }
 
 .checkbox{
@@ -179,6 +180,15 @@ td, th{
     margin: 0 0 1em;
     clear: left;
 }
+
+.titulo-principal::first-letter{
+    font-weight: bold;
+}
+
+p::first-line{
+    font-style: italic;
+}
+
 .principal p{
     margin: 0 0 1em;
 }
@@ -241,7 +251,7 @@ td, th{
 
 
 .items:first-child{
-    font-weight:bold
+    font-weight:bold;
 }
 
 .imgDiferenciales{
@@ -274,41 +284,47 @@ td, th{
         width: auto;
     }
 
+    .productos li{
+        width: -webkit-fill-available;
+    }
+
     .lista-diferenciales, .imgDiferenciales{
         width: 100%;
     }
 
-    .productos li{
-        display: block;
-        width: 100%;
-        text-align: center;
-        padding: 10px;
-        margin: 20px 0;
-       
-    }
-
-    form{
-        margin: auto;
-        padding: 10px 10px;
-    }
-
-    main{
-        background: linear-gradient(#fefefe, #888888);
-    }
-
-    .productos li:hover h2{
-        font-size: 33px;
-    }
-
-    nav a:hover{
-        color: #c78c19;
-        text-decoration: underline;
-    }
-
-    .productos li:active{
-        border-color: #088c19;
+    .input-padron{
+        border-style: solid;
     }
     
+}
+
+
+
+@media screen and (max-width:912px){
+    
+    h1{
+        text-align: center;
+    }
+
+    nav{
+        position: static;
+    }
+
+    .caja, .principal, .mapa-contenido, .contenido-diferenciales, .video, .productos{
+        width: auto;
+    }
+
+    .productos li{
+        width: -webkit-fill-available;
+    }
+
+    .lista-diferenciales, .imgDiferenciales{
+        width: 100%;
+    }
+
+    .input-padron{
+        border-style: solid;
+    }
     
 }
 
